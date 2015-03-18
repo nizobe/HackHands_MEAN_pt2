@@ -1,11 +1,9 @@
 var port = 1337;
-var express = require('express');
+var express = require('./config/express');
 var app = express();
 
-app.use('/', function(req, res) {
-	res.send('Howdy world');
-});
-
 app.listen(port);
+
+module.exports = app;
 
 console.log('Server running at http://localost: ' + port);
